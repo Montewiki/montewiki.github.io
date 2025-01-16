@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internet - Informations</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #0d1117;
+            color: #c9d1d9;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(90deg, #007cf0, #00dfd8);
+            color: #fff;
+            text-align: center;
+            padding: 2rem 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            color: #58a6ff;
+            border-bottom: 2px solid #21262d;
+            padding-bottom: 5px;
+        }
+
+        ul, ol {
+            margin-left: 20px;
+        }
+
+        ul li, ol li {
+            margin-bottom: 8px;
+        }
+
+        code {
+            background: #21262d;
+            color: #58a6ff;
+            padding: 4px 6px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background: linear-gradient(90deg, #00dfd8, #007cf0);
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+            border-bottom: 1px dashed #58a6ff;
+            transition: color 0.3s, border-bottom 0.3s;
+        }
+
+        a:hover {
+            color: #00dfd8;
+            border-bottom: 1px solid #00dfd8;
+        }
+
+        /* Animación para una barra luminosa en el header */
+        header::after {
+            content: "";
+            display: block;
+            height: 5px;
+            width: 100%;
+            background: linear-gradient(90deg, #007cf0, #00dfd8);
+            animation: movingBar 3s linear infinite;
+        }
+
+        @keyframes movingBar {
+            0% { background-position: 0%; }
+            100% { background-position: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informations sur Internet</h1>
+    </header>
+    <section>
+        <h2>Histoire d'Internet</h2>
+        <p>Internet a vu le jour dans les années 1960 avec le projet ARPANET, développé par le Département de la Défense des États-Unis pour connecter des ordinateurs entre eux.</p>
+        <ul>
+            <li><strong>1970-1980 :</strong> Expansion d'ARPANET et apparition des premiers protocoles réseaux (comme TCP/IP).</li>
+            <li><strong>1990 :</strong> Création du World Wide Web par Tim Berners-Lee.</li>
+            <li><strong>Aujourd'hui :</strong> Internet connecte des milliards de personnes et de services.</li>
+        </ul>
+        
+        <h2>Protocole TCP</h2>
+        <p>TCP (Transmission Control Protocol) garantit la transmission fiable des données entre deux dispositifs :</p>
+        <ul>
+            <li>Division des données en petits paquets.</li>
+            <li>Vérification et réassemblage des paquets à destination.</li>
+            <li>Retransmission automatique en cas de perte.</li>
+        </ul>
+        
+        <h2>Protocole IP</h2>
+        <p>IP (Internet Protocol) est responsable de l'adressage et du routage des paquets sur Internet :</p>
+        <ul>
+            <li>Chaque appareil connecté possède une adresse IP unique, comme <code>192.168.1.1</code>.</li>
+            <li>Les principales versions sont IPv4 et IPv6.</li>
+        </ul>
+        
+        <h2>DNS</h2>
+        <p>Le DNS (Domain Name System) traduit les noms de domaine en adresses IP :</p>
+        <ul>
+            <li>Exemple : <code>www.google.com → 172.217.16.196</code>.</li>
+            <li>Facilite l'accès aux sites web sans mémoriser les adresses IP complexes.</li>
+        </ul>
+        
+        <h2>Routage</h2>
+        <p>Le routage transmet les paquets entre différents réseaux pour atteindre leur destination :</p>
+        <ul>
+            <li>Les <strong>routeurs</strong> choisissent le meilleur chemin pour les données.</li>
+            <li>Algorithmes de routage : RIP, OSPF, BGP.</li>
+        </ul>
+        
+        <h2>Réseau pair à pair (P2P)</h2>
+        <p>Un réseau pair à pair connecte directement des ordinateurs sans serveur central :</p>
+        <ul>
+            <li>Chaque appareil agit comme client et serveur.</li>
+            <li>Utilisé pour le partage de fichiers (ex : BitTorrent) ou les cryptomonnaies.</li>
+        </ul>
+        
+        <h2>Conversion décimal à binaire</h2>
+        <p>Conversion des nombres décimaux en binaire :</p>
+        <p>Exemple : convertir <strong>10</strong> en binaire :</p>
+        <ol>
+            <li>Diviser 10 par 2 : <code>10 ÷ 2 = 5</code>, reste <code>0</code>.</li>
+            <li>Diviser 5 par 2 : <code>5 ÷ 2 = 2</code>, reste <code>1</code>.</li>
+            <li>Diviser 2 par 2 : <code>2 ÷ 2 = 1</code>, reste <code>0</code>.</li>
+            <li>Diviser 1 par 2 : <code>1 ÷ 2 = 0</code>, reste <code>1</code>.</li>
+        </ol>
+        <p>Résultat : <code>1010</code>.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Informations sur Internet. Tous droits réservés.</p>
+    </footer>
+</body>
+</html>
