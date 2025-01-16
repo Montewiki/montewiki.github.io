@@ -1,81 +1,138 @@
 # montewiki.github.io
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sitio Estudiantil</title>
+    <title>Unique Website</title>
     <style>
+        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
-            background-color: #e6f7ff;
-            color: #333;
             margin: 0;
-            padding: 20px;
-            transition: background-color 0.3s;
+            padding: 0;
+            background: #121212;
+            color: #ffffff;
+            overflow-x: hidden;
         }
+
+        /* Header Styles */
         header {
-            background: #00bfff;
-            color: white;
+            background: linear-gradient(90deg, #ff6f61, #ff9e2c);
+            color: #fff;
+            text-align: center;
             padding: 20px 0;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
         }
-        h1 {
+
+        header h1 {
+            font-size: 2.5rem;
             margin: 0;
-            font-size: 2.5em;
+            animation: glowing 2s infinite;
         }
+
+        @keyframes glowing {
+            0% { text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff9e2c; }
+            50% { text-shadow: 0 0 20px #ff9e2c, 0 0 40px #ff6f61; }
+            100% { text-shadow: 0 0 5px #ff6f61, 0 0 10px #ff9e2c; }
+        }
+
+        /* Navigation */
         nav {
-            margin-top: 15px;
+            background: #1e1e1e;
+            padding: 10px 0;
         }
-        nav a {
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
             margin: 0 15px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            color: white;
+            color: #ff9e2c;
             font-weight: bold;
+            transition: color 0.3s;
         }
+
+        nav ul li a:hover {
+            color: #ff6f61;
+        }
+
+        /* Section Styles */
         section {
-            margin-top: 20px;
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-        }
-        .topic {
-            margin: 15px 0;
-            padding: 10px;
-            background: #ffecb3;
-            border-left: 5px solid #ff5722;
-        }
-        footer {
+            padding: 40px 20px;
             text-align: center;
-            margin-top: 20px;
-            font-size: 0.9em;
-            color: #888;
+        }
+
+        section:nth-child(odd) {
+            background: #1f1f1f;
+        }
+
+        section:nth-child(even) {
+            background: #292929;
+        }
+
+        section h2 {
+            color: #ff9e2c;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(90deg, #ff9e2c, #ff6f61);
+            text-align: center;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Bienvenidos al Sitio Estudiantil</h1>
+    <header>
+        <h1>Welcome to Your Unique Website</h1>
+    </header>
     <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Recursos</a>
-        <a href="#">Actividades</a>
-        <a href="#">Contacto</a>
+        <ul>
+            <li><a href="#section1">Home</a></li>
+            <li><a href="#section2">About</a></li>
+            <li><a href="#section3">Services</a></li>
+            <li><a href="#section4">Contact</a></li>
+        </ul>
     </nav>
-</header>
-
-<section>
-    <h2>Internet</h2>
-    <p><!-- Aquí puedes agregar el contenido sobre Internet cuando lo desees --></p>
-</section>
-
-<footer>
-    <p>&copy; 2023 Sitio Estudiantil. Todos los derechos reservados.</p>
-</footer>
-
+    <section id="section1">
+        <h2>Home</h2>
+        <p>Welcome to our unique website, where creativity meets technology.</p>
+    </section>
+    <section id="section2">
+        <h2>About</h2>
+        <p>We are dedicated to providing innovative solutions that stand out in the digital landscape.</p>
+    </section>
+    <section id="section3">
+        <h2>Services</h2>
+        <p>From web design to cutting-edge software development, we have the expertise to bring your ideas to life.</p>
+    </section>
+    <section id="section4">
+        <h2>Contact</h2>
+        <p>Have a project in mind? Get in touch with us to discuss your vision.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Unique Website. All rights reserved.</p>
+    </footer>
 </body>
 </html>
