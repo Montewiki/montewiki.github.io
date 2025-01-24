@@ -109,7 +109,7 @@
     </header>
     <nav>
         <ul>
-            <li><a href="#section1">Internet</a></li>
+            <li><a href="#https://montewiki.github.io/Internet">Internet</a></li>
             <li><a href="#section2">WEB</a></li>
             <li><a href="#section3">Programmetion</a></li>
             <li><a href="#section4">Contact</a></li>
