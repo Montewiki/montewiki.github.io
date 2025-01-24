@@ -105,7 +105,7 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Your Unique Website</h1>
+        <h1>Montewiki</h1>
     </header>
     <nav>
         <ul>
@@ -116,8 +116,8 @@
         </ul>
     </nav>
     <section id="section1">
-        <h2>Home</h2>
-        <p>Welcome to our unique website, where creativity meets technology.</p>
+        <h2>Accueil</h2>
+        <p>Welcome to Montewiki's website</p>
     </section>
     <section id="section2">
         <h2>About</h2>
