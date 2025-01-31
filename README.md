@@ -59,7 +59,7 @@
     <section>
         <h2>Bienvenue sur le site de Montewiki</h2>
         <p>Nous sommes ravis de vous accueillir. Explorez nos services et solutions innovantes.</p>
-        <a href="#services" class="button">Découvrez nos services</a>
+        <a href="https://montewiki.github.io/accueil" class="button">Découvrez nos services</a>
     </section>
     <footer>
         <p>&copy; 2025 Montewiki. Tous droits réservés.</p>
