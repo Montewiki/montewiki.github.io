@@ -79,8 +79,29 @@
         <button>Botón 20</button>
     </div>
 
-    <a href="https://montewiki.github.io/accueil" target="_blank">
-            <button>returner</button>
+<!-- Link en la esquina inferior derecha (desplazable con el scroll) -->
+<a href="https://montewiki.github.io/accueil" class="bottom-right-link">retuner</a>
+
+<style>
+  .bottom-right-link {
+    position: relative; /* Permite que se desplace con el contenido al hacer scroll */
+    bottom: 20px;
+    right: 20px;
+    background-color: #28D500;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  .bottom-right-link:hover {
+    background-color: #1e9f00;
+    transform: scale(1.1);
+  }
+</style>
         
     </script>
 </body>
