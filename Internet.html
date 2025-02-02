@@ -1,103 +1,102 @@
-<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comprendre Internet</title>
+    <title>Montewiki</title>
     <style>
+        /* General Styles */
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f9;
-            color: #333;
-        }
-        h1 {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #dcdcdc; /* Gris claro */
+            color: #333333;
             text-align: center;
-            color: #333;
+            animation: fadeIn 1s ease-in;
         }
-        h2 {
-            color: #2c3e50;
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
-        p {
-            font-size: 16px;
-            color: #555;
+
+        /* Header Styles */
+        header {
+            background: #39FF14; /* Verde radioactivo */
+            color: black;
+            padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            height: auto;
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
-        .section {
-            margin-bottom: 40px;
+
+        /* Button Styles */
+        .button {
+            background: #39FF14; /* Verde radioactivo */
+            color: black;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            text-decoration: none; /* Para enlaces */
+            display: inline-block; /* Para centrar el botón */
+            margin: 10px;
         }
-        .container {
-            width: 80%;
-            margin: 0 auto;
+
+        .button:hover {
+            background: #32e60f; /* Tonalidad más intensa al pasar el ratón */
+            transform: scale(1.1); /* Efecto de escala */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .button:active {
+            background: #28b50c; /* Tonalidad más oscura al hacer clic */
+            transform: scale(0.95);
+        }
+
+        /* Footer Styles */
+        footer {
+            background: #f0f0f0; /* Gris claro */
+            color: #333333;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Section Styles */
+        section {
+            margin: 50px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Comprendre le Fonctionnement d'Internet</h1>
-
-        <!-- Histoire d'Internet -->
-        <div class="section">
-            <h2>Histoire d'Internet</h2>
-            <p>Internet a commencé dans les années 1960 en tant que projet de recherche militaire appelé ARPANET. L'idée initiale était de créer un réseau de communication résilient pour les militaires et chercheurs. Au fil du temps, il est devenu plus accessible et a évolué pour ce que nous connaissons aujourd'hui comme l'Internet mondial.</p>
-            <img src="https://via.placeholder.com/600x300?text=Histoire+d'Internet" alt="Histoire d'Internet">
-        </div>
-
-        <!-- Protocole TCP -->
-        <div class="section">
-            <h2>Protocole TCP</h2>
-            <p>Le <strong>TCP (Transmission Control Protocol)</strong> est responsable de diviser les données en paquets, de les envoyer à travers Internet et de s'assurer qu'elles arrivent intactes. Si un paquet est perdu ou corrompu, TCP s'assure qu'il soit renvoyé. C'est un protocole essentiel pour garantir la fiabilité des communications.</p>
-            <img src="https://via.placeholder.com/600x300?text=Diagramme+du+Protocole+TCP" alt="Protocole TCP">
-        </div>
-
-        <!-- Protocole IP -->
-        <div class="section">
-            <h2>Protocole IP</h2>
-            <p>Le <strong>protocole IP (Internet Protocol)</strong> est responsable de l'adressage et du routage des paquets de données entre les différents appareils sur Internet. Chaque appareil connecté à Internet a une adresse IP unique, qui fonctionne comme une adresse postale pour que les données puissent arriver à destination.</p>
-            <img src="https://via.placeholder.com/600x300?text=Diagramme+du+Protocole+IP" alt="Protocole IP">
-        </div>
-
-        <!-- DNS -->
-        <div class="section">
-            <h2>DNS (Domain Name System)</h2>
-            <p>Le <strong>DNS</strong> est comme un annuaire téléphonique d'Internet. Il traduit les noms de domaine lisibles par l'homme (comme <strong>www.exemple.com</strong>) en adresses IP que les ordinateurs peuvent comprendre. Cela permet aux utilisateurs de se connecter facilement à des sites Web sans avoir à se souvenir de longues séries de chiffres.</p>
-            <img src="https://via.placeholder.com/600x300?text=Diagramme+DNS" alt="DNS">
-        </div>
-
-        <!-- Routage -->
-        <div class="section">
-            <h2>Routage</h2>
-            <p>Le <strong>routage</strong> est le processus par lequel les paquets de données sont acheminés à travers divers réseaux jusqu'à leur destination finale. Cela implique l'utilisation de routeurs qui déterminent le chemin optimal pour chaque paquet, en fonction de l'adresse IP de destination.</p>
-            <img src="https://via.placeholder.com/600x300?text=Diagramme+de+Routage" alt="Routage">
-        </div>
-
-        <!-- Réseau Pair-à-Pair -->
-        <div class="section">
-            <h2>Réseau Pair-à-Pair</h2>
-            <p>Un <strong>réseau pair-à-pair</strong> (P2P) permet à des ordinateurs de se connecter directement les uns aux autres sans passer par un serveur central. Ce type de réseau est couramment utilisé pour partager des fichiers ou pour des services de communication comme les appels VoIP.</p>
-            <img src="https://via.placeholder.com/600x300?text=Diagramme+Réseau+P2P" alt="Réseau Pair-à-Pair">
-        </div>
-
-        <!-- Conversion Décimal à Binaire -->
-        <div class="section">
-            <h2>Conversion Décimal à Binaire</h2>
-            <p>Les ordinateurs utilisent des nombres binaires (composés de 0 et 1) pour traiter les informations. Pour convertir un nombre décimal (base 10) en binaire (base 2), il faut diviser successivement le nombre par 2 et enregistrer les restes. Par exemple, pour convertir le nombre 13 en binaire :</p>
-            <ul>
-                <li>13 ÷ 2 = 6 reste 1</li>
-                <li>6 ÷ 2 = 3 reste 0</li>
-                <li>3 ÷ 2 = 1 reste 1</li>
-                <li>1 ÷ 2 = 0 reste 1</li>
-            </ul>
-            <p>Le nombre 13 en binaire est donc <strong>1101</strong>.</p>
-            <img src="https://via.placeholder.com/600x300?text=Conversion+Décimal+Binaire" alt="Conversion Décimal à Binaire">
-        </div>
-
-    </div>
+    <header>
+        <h1>Montewiki</h1>
+    </header>
+    <section>
+        <h2>Bienvenue sur le site de Montewiki</h2>
+        <p>Nous sommes ravis de vous accueillir. Explorez nos services et solutions innovantes.</p>
+        <a href="#services" class="button">Découvrez nos services</a>
+    </section>
+    <footer>
+        <p>&copy; 2025 Montewiki. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
