@@ -12,6 +12,12 @@
             background: #dcdcdc; /* Gris claro */
             color: #333333;
             text-align: center;
+            animation: fadeIn 1s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
         /* Header Styles */
@@ -19,25 +25,33 @@
             background: #39FF14; /* Verde radioactivo */
             color: black;
             padding: 20px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
         /* Button Styles */
         .button {
             background: #39FF14; /* Verde radioactivo */
             color: black;
-            padding: 10px 20px;
+            padding: 15px 30px;
             border: none;
-            border-radius: 10px;
+            border-radius: 20px;
             cursor: pointer;
-            font-size: 16px;
-            transition: background 0.3s, transform 0.3s;
+            font-size: 18px;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
             text-decoration: none; /* Para enlaces */
             display: inline-block; /* Para centrar el botón */
+            margin: 10px;
         }
 
         .button:hover {
             background: #32e60f; /* Tonalidad más intensa al pasar el ratón */
-            transform: scale(1.05); /* Efecto de escala */
+            transform: scale(1.1); /* Efecto de escala */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
         }
 
         .button:active {
@@ -50,14 +64,25 @@
             background: #f0f0f0; /* Gris claro */
             color: #333333;
             padding: 10px 0;
-            position: absolute;
+            position: fixed;
             width: 100%;
             bottom: 0;
+            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
         }
 
         /* Section Styles */
         section {
             margin: 50px 20px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            animation: slideUp 1s ease-in-out;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
         }
     </style>
 </head>
