@@ -226,14 +226,14 @@
     }
   </script>
 
-<!-- Link en la esquina inferior derecha (desplazable con el scroll) -->
+<!-- Link en la esquina inferior derecha (flotante y fijo) -->
 <a href="https://www.ejemplo.com" target="_blank" class="bottom-right-link">Visiter le site</a>
 
 <style>
   .bottom-right-link {
-    position: relative; /* Permite que se desplace con el contenido al hacer scroll */
-    bottom: 20px;
-    right: 20px;
+    position: fixed; /* Hace que el enlace esté fijo en la pantalla */
+    bottom: 20px; /* Distancia desde la parte inferior */
+    right: 20px; /* Distancia desde la parte derecha */
     background-color: #28D500;
     color: white;
     padding: 10px 20px;
