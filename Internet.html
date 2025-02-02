@@ -1,102 +1,194 @@
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Montewiki</title>
-    <style>
-        /* General Styles */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #dcdcdc; /* Gris claro */
-            color: #333333;
-            text-align: center;
-            animation: fadeIn 1s ease-in;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fonctionnement d'Internet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
+    /* Réinitialisation des styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f1f1f1; /* Gris clair */
+      color: #333;
+      line-height: 1.6;
+      padding: 0 20px;
+    }
 
-        /* Header Styles */
-        header {
-            background: #39FF14; /* Verde radioactivo */
-            color: black;
-            padding: 20px 0;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
+    header {
+      text-align: center;
+      margin: 50px 0;
+    }
 
-        header h1 {
-            font-size: 2.5em;
-            margin: 0;
-        }
+    h1 {
+      font-size: 3rem;
+      color: #333;
+      animation: fadeIn 2s ease-in-out;
+    }
 
-        /* Button Styles */
-        .button {
-            background: #39FF14; /* Verde radioactivo */
-            color: black;
-            padding: 15px 30px;
-            border: none;
-            border-radius: 20px;
-            cursor: pointer;
-            font-size: 18px;
-            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
-            text-decoration: none; /* Para enlaces */
-            display: inline-block; /* Para centrar el botón */
-            margin: 10px;
-        }
+    .section {
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin: 20px 0;
+      padding: 30px;
+      animation: slideInUp 1s ease-out;
+    }
 
-        .button:hover {
-            background: #32e60f; /* Tonalidad más intensa al pasar el ratón */
-            transform: scale(1.1); /* Efecto de escala */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-        }
+    .section h2 {
+      color: #28D500; /* Vert radioactif */
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
 
-        .button:active {
-            background: #28b50c; /* Tonalidad más oscura al hacer clic */
-            transform: scale(0.95);
-        }
+    .section p {
+      color: #666;
+      font-size: 1.1rem;
+    }
 
-        /* Footer Styles */
-        footer {
-            background: #f0f0f0; /* Gris claro */
-            color: #333333;
-            padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
-        }
+    .section img {
+      width: 100%;
+      max-width: 600px;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
 
-        /* Section Styles */
-        section {
-            margin: 50px 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            animation: slideUp 1s ease-in-out;
-        }
+    /* Styles des boutons */
+    .button {
+      background-color: #28D500;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 15px 25px;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: all 0.3s ease;
+    }
 
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-    </style>
+    .button:hover {
+      background-color: #1e9f00;
+      transform: scale(1.1);
+    }
+
+    /* Styles du contenu caché */
+    .content {
+      display: none;
+      padding: 15px;
+      background-color: #f9f9f9;
+      margin-top: 10px;
+      border-radius: 8px;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Montewiki</h1>
-    </header>
-    <section>
-        <h2>Bienvenue sur le site de Montewiki</h2>
-        <p>Nous sommes ravis de vous accueillir. Explorez nos services et solutions innovantes.</p>
-        <a href="#services" class="button">Découvrez nos services</a>
-    </section>
-    <footer>
-        <p>&copy; 2025 Montewiki. Tous droits réservés.</p>
-    </footer>
+
+  <header>
+    <h1>Fonctionnement d'Internet</h1>
+    <p>Explorez le fonctionnement d'Internet et découvrez les protocoles, outils et technologies qui permettent la communication mondiale.</p>
+  </header>
+
+  <!-- Section Histoire d'Internet -->
+  <div class="section">
+    <button class="button" onclick="toggleContent('content-historia')">Histoire d'Internet</button>
+    <div id="content-historia" class="content">
+      <p>Internet a ses origines dans le projet ARPANET, créé dans les années 1960 par le département de la Défense des États-Unis. Son objectif était de créer un réseau de communication décentralisé permettant de partager des informations efficacement entre différentes universités et centres de recherche.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/ARPANET_map_1969.svg" alt="Carte d'ARPANET">
+      <p>Exemple : Si vous envoyez une lettre par le biais du courrier traditionnel, cette lettre passe par plusieurs bureaux jusqu'à atteindre son destinataire. Sur Internet, les paquets d'informations suivent un parcours similaire à travers différents réseaux et appareils jusqu'à atteindre leur destination.</p>
+    </div>
+  </div>
+
+  <!-- Section Protocole TCP -->
+  <div class="section">
+    <button class="button" onclick="toggleContent('content-tcp')">Protocole TCP</button>
+    <div id="content-tcp" class="content">
+      <p>Le **protocole TCP (Transmission Control Protocol)** est l'un des piliers de la communication sur Internet. Il garantit que les données envoyées d'un point à un autre arrivent complètes et sans erreur.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Tcpip-Protocol-Stack.svg" alt="Modèle TCP/IP">
+      <p>Exemple : Imaginez que vous envoyez une lettre avec plusieurs pages. Si une page se perd en chemin, le protocole TCP vous permet de la renvoyer sans avoir à renvoyer toute la lettre.</p>
+      <div class="code-example">
+        <strong>Exemple de paquets TCP :</strong><br>
+        Paquet 1 : "Bonjour"<br>
+        Paquet 2 : "Monde"<br>
+        Paquet 3 : "!"
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Protocole IP -->
+  <div class="section">
+    <button class="button" onclick="toggleContent('content-ip')">Protocole IP</button>
+    <div id="content-ip" class="content">
+      <p>Le **protocole IP (Internet Protocol)** est responsable de diriger les paquets de données vers leur destination. Chaque appareil sur Internet possède une **adresse IP unique**.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/IPV4-and-IPV6-Comparison.svg" alt="Comparaison IPv4 et IPv6">
+      <p>Exemple : Si vous avez une adresse chez vous (par exemple, Rue Fictive 123), cette adresse est unique et permet aux facteurs de savoir où livrer votre courrier.</p>
+      <div class="code-example">
+        <strong>Exemple d'adresse IP :</strong><br>
+        IPv4 : 192.168.1.1<br>
+        IPv6 : 2001:0db8:85a3:0000:0000:8a2e:0370:7334
+      </div>
+    </div>
+  </div>
+
+  <!-- Section DNS -->
+  <div class="section">
+    <button class="button" onclick="toggleContent('content-dns')">DNS</button>
+    <div id="content-dns" class="content">
+      <p>Le **DNS (Domain Name System)** permet de traduire les **noms de domaine** en adresses IP. C'est l'annuaire téléphonique d'Internet.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7c/Dns-example.svg" alt="Exemple de requête DNS">
+      <p>Exemple : Lorsque vous tapez "www.exemple.com" dans votre navigateur, le DNS effectue la recherche pour traduire ce nom en l'adresse IP correspondante, comme "192.168.1.1".</p>
+      <div class="code-example">
+        <strong>Exemple de requête DNS :</strong><br>
+        Requête DNS : www.exemple.com → 192.168.1.1
+      </div>
+    </div>
+  </div>
+
+  <!-- Section Video -->
+  <div class="section">
+    <h2>Vidéo sur le Fonctionnement d'Internet</h2>
+    <p>Découvrez comment fonctionne Internet grâce à cette vidéo explicative :</p>
+    <div>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/7_LKfrDs9XI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    function toggleContent(id) {
+      const content = document.getElementById(id);
+      content.style.display = content.style.display === "block" ? "none" : "block";
+    }
+  </script>
+
 </body>
 </html>
