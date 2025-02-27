@@ -1,1 +1,157 @@
-sfhrth
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Numérique et Codage TSL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333333; /* Gris oscuro */
+            color: white;
+        }
+        header {
+            background-color: #39FF14; /* Verde radioactivo */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            background-color: #444444; /* Gris más claro para el fondo de las secciones */
+            padding: 15px;
+            border-radius: 8px;
+        }
+        h2 {
+            color: #39FF14; /* Verde radioactivo */
+            cursor: pointer;
+        }
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #39FF14; /* Verde radioactivo */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #33cc12; /* Verde más oscuro */
+        }
+        .btn:focus {
+            outline: none;
+        }
+        img {
+            width: 100%; /* Ajusta la imagen al ancho de la sección */
+            max-width: 600px; /* Tamaño máximo para la imagen */
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        video {
+            width: 100%; /* Ajusta el video al ancho de la sección */
+            max-width: 800px; /* Tamaño máximo para el video */
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+        .content-text {
+            display: none;
+            padding-top: 10px;
+        }
+        .section.active .content-text {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Comprendre les Concepts des Images Numériques et du Codage TSL</h1>
+    </header>
+
+    <div class="content">
+        <div class="section" id="section1">
+            <h2 onclick="toggleContent('section1')">Une image numérique : Qu'est-ce que c'est ?</h2>
+            <div class="content-text">
+                <!-- Espacio para imagen -->
+                <img src="image1.jpg" alt="Image numérique">
+                <p>Une image numérique est composée de petites unités appelées <strong>pixels</strong>. Chaque pixel est un petit point coloré, et l'ensemble de ces pixels forme l'image dans son intégralité. Plus une image a de pixels, plus elle peut être détaillée. Ainsi, une image numérique peut contenir des milliers, voire des millions de pixels, ce qui permet de créer des représentations visuelles précises et nettes.</p>
+                <a href="#!" class="btn">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="section" id="section2">
+            <h2 onclick="toggleContent('section2')">Le système de couleurs RVB</h2>
+            <div class="content-text">
+                <!-- Espacio para imagen -->
+                <img src="image2.jpg" alt="Système de couleurs RVB">
+                <p>Le <strong>système RVB</strong> (Rouge, Vert, Bleu) est une méthode utilisée pour représenter les couleurs à l'écran, notamment dans les téléviseurs, ordinateurs, smartphones, etc. Dans ce système, les couleurs sont créées par la combinaison de trois couleurs de base : <strong>le rouge, le vert et le bleu</strong>. Chaque couleur de base peut avoir une intensité différente, et en variant ces intensités, on peut créer une large gamme de couleurs.</p>
+                <a href="#!" class="btn">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="section" id="section3">
+            <h2 onclick="toggleContent('section3')">Combien de couleurs peuvent être créées avec le système RVB ?</h2>
+            <div class="content-text">
+                <!-- Espacio para imagen -->
+                <img src="image3.jpg" alt="Couleurs RVB">
+                <p>Dans le système RVB, il est possible de créer <strong>16 777 216 couleurs différentes</strong>. Cela est dû au fait que chaque couleur (rouge, vert et bleu) peut avoir <strong>256 niveaux d'intensité</strong> (allant de 0 à 255). En combinant ces trois couleurs à ces 256 niveaux, on obtient un total de 256 x 256 x 256 couleurs, soit 16 777 216 couleurs différentes.</p>
+                <a href="#!" class="btn">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="section" id="section4">
+            <h2 onclick="toggleContent('section4')">Résolution et définition : est-ce la même chose ?</h2>
+            <div class="content-text">
+                <!-- Espacio para imagen -->
+                <img src="image4.jpg" alt="Résolution et définition">
+                <p>Non, la <strong>résolution</strong> et la <strong>définition</strong> d'une image ou d'un écran ne sont pas la même chose. La <strong>résolution</strong> désigne le <strong>nombre total de pixels</strong> présents sur une image ou un écran. Par exemple, un écran de <strong>1920 x 1080 pixels</strong> a une résolution de 2 073 600 pixels (1920 multiplié par 1080). En revanche, la <strong>définition</strong> se réfère à la <strong>qualité</strong> de l'image, c'est-à-dire à sa netteté et à sa précision. Une image avec une résolution plus élevée peut être plus nette, mais la définition dépend aussi de la taille et de la qualité de l'écran.</p>
+                <a href="#!" class="btn">En savoir plus</a>
+            </div>
+        </div>
+
+        <div class="section" id="section5">
+            <h2 onclick="toggleContent('section5')">Le codage TSL : Qu'est-ce que c'est ?</h2>
+            <div class="content-text">
+                <!-- Espacio para imagen -->
+                <img src="image5.jpg" alt="Codage TSL">
+                <p>Le <strong>codage TSL</strong> (ou <strong>TLS</strong>, pour <strong>Transport Layer Security</strong> en anglais) est une technologie de sécurité utilisée pour protéger les échanges d'informations sur Internet. Lorsque vous visitez un site web sécurisé (par exemple, ceux dont l'URL commence par "https"), TSL garantit que les données échangées entre votre ordinateur et le site sont <strong>cryptées</strong> et ne peuvent pas être interceptées par des personnes malveillantes. Cela contribue à assurer la sécurité des informations sensibles telles que les mots de passe ou les informations bancaires.</p>
+                <a href="#!" class="btn">En savoir plus</a>
+            </div>
+        </div>
+
+        <!-- Sección para video -->
+        <div class="section" id="videoSection">
+            <h2 onclick="toggleContent('videoSection')">Regardez cette vidéo sur le codage TSL</h2>
+            <div class="content-text">
+                <!-- Espacio para video -->
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <p>Voici une vidéo explicative qui vous aidera à mieux comprendre le codage TSL et comment il assure la sécurité des informations sur Internet.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function toggleContent(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.classList.toggle("active");
+        }
+    </script>
+
+</body>
+</html>
