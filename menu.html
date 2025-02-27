@@ -11,7 +11,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            min-height: 200vh; /* Altura mayor para probar el scroll */
+            min-height: 100vh;
             background-color: #dcdcdc;
             color: #333333;
             position: relative;
@@ -19,46 +19,43 @@
 
         .menu {
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            gap: 20px; /* Ajuste del espacio entre los botones */
+            grid-template-columns: repeat(4, 1fr); /* 4 botones por fila */
+            gap: 20px; /* Espacio entre botones */
             padding: 30px;
             background-color: #f0f0f0;
             border-radius: 15px;
+            width: 80%; /* Ancho ajustable */
         }
 
         .menu button {
-            padding: 25px; /* Aumento el padding para hacer los botones más grandes */
-            font-size: 24px; /* Aumento el tamaño de la fuente */
+            padding: 30px;
+            font-size: 24px;
             border: none;
-            border-radius: 15px; /* Bordes redondeados más grandes */
-            background-color: #39FF14; /* Verde radioactivo */
+            border-radius: 15px;
+            background-color: #39FF14;
             color: black;
             cursor: pointer;
             transition: transform 0.3s, background-color 0.3s;
-            min-width: 150px; /* Ancho mínimo para los botones */
+            min-width: 180px;
         }
 
         .menu button:hover {
-            background-color: #32e60f; /* Tonalidad más intensa al pasar el mouse */
+            background-color: #32e60f;
             transform: scale(1.1);
         }
 
         .menu button:active {
-            background-color: #28b50c; /* Tonalidad más oscura al hacer clic */
+            background-color: #28b50c;
             transform: scale(0.9);
         }
 
-        .menu a {
-            text-decoration: none;
-        }
-
         .bottom-right-link {
-            position: fixed; /* Cambio a fixed para que siempre esté visible */
+            position: fixed;
             bottom: 20px;
             right: 20px;
             background-color: #28D500;
             color: white;
-            padding: 15px 25px; /* Aumento del padding */
+            padding: 15px 25px;
             border-radius: 8px;
             text-decoration: none;
             font-weight: bold;
@@ -100,12 +97,7 @@
         <button>Botón 20</button>
     </div>
 
-    <!-- Link en la esquina inferior derecha (desplazable con el scroll) -->
     <a href="https://montewiki.github.io/accueil" class="bottom-right-link">Retourner</a>
 
-</body>
-</html>
-        
-    </script>
 </body>
 </html>
