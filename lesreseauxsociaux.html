@@ -1,103 +1,88 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Presentación de TikTok sobre privacidad y opciones de seguridad.">
-    <title>Presentación TikTok</title>
+    <title>Image Numérique et Codage TSL</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            line-height: 1.6;
+            background-color: #333333; /* Gris oscuro */
+            color: white;
         }
 
         header {
-            background-color: #00FF00;
+            background-color: #39FF14; /* Verde radioactivo */
             color: white;
-            text-align: center;
             padding: 20px;
-            border-bottom: 3px solid #00cc00;
+            text-align: center;
         }
 
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-            letter-spacing: 1px;
+        .content {
+            padding: 20px;
         }
 
-        section {
-            margin: 2em;
-            padding: 1.5em;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        .section {
+            margin-bottom: 30px;
+            background-color: #444444; /* Gris más claro para el fondo de las secciones */
+            padding: 15px;
+            border-radius: 8px;
         }
 
-        .dropdown {
-            margin: 1em 0;
-        }
-
-        .dropdown button {
-            background-color: #00FF00;
-            color: white;
-            padding: 1em;
-            border: none;
+        h2 {
+            color: #39FF14; /* Verde radioactivo */
             cursor: pointer;
-            width: 100%;
-            text-align: left;
-            font-size: 1.2em;
-            border-radius: 25px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s, transform 0.3s ease;
-            margin-bottom: 1em;
         }
 
-        .dropdown button:hover {
-            background-color: #00cc00;
-            transform: scale(1.05);
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
         }
 
-        .dropdown button.open {
-            background-color: #00cc00;
-            transform: scale(1.05);
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #39FF14; /* Verde radioactivo */
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
         }
 
-        .dropdown-content {
+        .btn:hover {
+            background-color: #33cc12; /* Verde más oscuro */
+        }
+
+        .btn:focus {
+            outline: none;
+        }
+
+        img {
+            width: 100%; /* Ajusta la imagen al ancho de la sección */
+            max-width: 600px; /* Tamaño máximo para la imagen */
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        video {
+            width: 100%; /* Ajusta el video al ancho de la sección */
+            max-width: 800px; /* Tamaño máximo para el video */
+            height: auto;
+            display: block;
+            margin: 20px 0;
+        }
+
+        .content-text {
             display: none;
-            padding: 1em;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-top: none;
-            border-radius: 10px;
+            padding-top: 10px;
         }
 
-        .video-section {
-            margin-top: 2em;
-            text-align: center;
-        }
-
-        .video-section iframe {
-            width: 100%;
-            height: 400px;
-            border-radius: 15px;
-            border: none;
-        }
-
-        footer {
-            background-color: #ccc;
-            padding: 1em;
-            text-align: center;
-            margin-top: 2em;
-            border-top: 2px solid #bbb;
-        }
-
-        .footer-text {
-            color: #555;
-            font-size: 1.2em;
-            letter-spacing: 0.5px;
+        .section.active .content-text {
+            display: block;
         }
 
         /* Estilo para el botón flotante */
@@ -105,9 +90,9 @@
             position: fixed;
             bottom: 20px;
             right: 20px;
-            background-color: #00FF00;
+            background-color: #39FF14;
             color: white;
-            border: none;
+            text-decoration: none;
             padding: 15px 20px;
             font-size: 1.2em;
             border-radius: 50%;
@@ -117,98 +102,74 @@
         }
 
         .return-button:hover {
-            background-color: #00cc00;
+            background-color: #33cc12;
             transform: scale(1.1);
         }
+
     </style>
 </head>
 <body>
 
-<header>
-    <h1>Presentación de TikTok</h1>
-</header>
+    <header>
+        <h1>Comprendre les Concepts des Images Numériques et du Codage TSL</h1>
+    </header>
 
-<main>
-    <article>
-        <section>
-            <h2>1. Paramètres de confidentialité</h2>
-            <div class="dropdown">
-                <button onclick="toggleDropdown('dropdown1')">Les utilisateurs peuvent-ils régler des paramètres de confidentialité ?</button>
-                <div id="dropdown1" class="dropdown-content">
-                    <p>Oui, TikTok offre des paramètres de confidentialité pour protéger la vie privée des utilisateurs. Ils peuvent rendre leur compte public ou privé et restreindre l'accès à leurs vidéos et commentaires.</p>
-                </div>
+    <div class="content">
+        <div class="section" id="section1">
+            <h2 onclick="toggleContent('section1')">Une image numérique : Qu'est-ce que c'est ?</h2>
+            <div class="content-text">
+                <img src="https://www.police-scientifique.com/wp-content/uploads/2014/12/pixel-image-num%C3%A9rique.jpg" alt="Image numérique">
+                <p>Une image numérique est composée de petites unités appelées <strong>pixels</strong>. Chaque pixel est un petit point coloré, et l'ensemble de ces pixels forme l'image dans son intégralité. Plus une image a de pixels, plus elle peut être détaillée. Ainsi, une image numérique peut contenir des milliers, voire des millions de pixels, ce qui permet de créer des représentations visuelles précises et nettes.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>2. Désinscription</h2>
-            <div class="dropdown">
-                <button onclick="toggleDropdown('dropdown2')">Est-il facile de se désinscrire de ce réseau social ?</button>
-                <div id="dropdown2" class="dropdown-content">
-                    <p>Oui, il est assez simple de se désinscrire de TikTok en accédant aux paramètres du compte et en choisissant l'option de suppression. Il existe une période de rétractation de 30 jours.</p>
-                </div>
+        <div class="section" id="section2">
+            <h2 onclick="toggleContent('section2')">Le système de couleurs RVB</h2>
+            <div class="content-text">
+                <img src="https://altronics.fr/fr/wp-content/uploads/2018/11/RVBPix.jpg" alt="Système de couleurs RVB">
+                <p>Le <strong>système RVB</strong> (Rouge, Vert, Bleu) est une méthode utilisée pour représenter les couleurs à l'écran, notamment dans les téléviseurs, ordinateurs, smartphones, etc. Dans ce système, les couleurs sont créées par la combinaison de trois couleurs de base : <strong>le rouge, le vert et le bleu</strong>. Chaque couleur de base peut avoir une intensité différente, et en variant ces intensités, on peut créer une large gamme de couleurs.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>3. Demande de données personnelles</h2>
-            <div class="dropdown">
-                <button onclick="toggleDropdown('dropdown3')">Le réseau social propose-t-il une procédure pour obtenir une copie des données collectées ?</button>
-                <div id="dropdown3" class="dropdown-content">
-                    <p>Oui, TikTok permet aux utilisateurs de demander une copie de leurs données personnelles via les paramètres de confidentialité. Le processus est simple et les données sont envoyées sous forme de fichier téléchargeable.</p>
-                </div>
+        <div class="section" id="section3">
+            <h2 onclick="toggleContent('section3')">Combien de couleurs peuvent être créées avec le système RVB ?</h2>
+            <div class="content-text">
+                <img src="https://www.researchgate.net/profile/Abdelmalik-Ouamane/publication/291345615/figure/fig28/AS:614165001535516@1523439755884/Differents-systemes-colorimetriques-a-plan-du-systeme-de-couleurs-RVB-b-cylindre-du.png" alt="Couleurs RVB">
+                <p>Dans le système RVB, il est possible de créer <strong>16 777 216 couleurs différentes</strong>. Cela est dû au fait que chaque couleur (rouge, vert et bleu) peut avoir <strong>256 niveaux d'intensité</strong> (allant de 0 à 255). En combinant ces trois couleurs à ces 256 niveaux, on obtient un total de 256 x 256 x 256 couleurs, soit 16 777 216 couleurs différentes.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>4. Suppression des données personnelles</h2>
-            <div class="dropdown">
-                <button onclick="toggleDropdown('dropdown4')">Le réseau social efface-t-il toutes traces des données personnelles après la désinscription ?</button>
-                <div id="dropdown4" class="dropdown-content">
-                    <p>Oui, TikTok supprime les données personnelles des utilisateurs qui se désinscrivent, mais certaines informations peuvent être conservées pour des raisons légales ou techniques.</p>
-                </div>
+        <div class="section" id="section4">
+            <h2 onclick="toggleContent('section4')">Résolution et définition : est-ce la même chose ?</h2>
+            <div class="content-text">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV_TlwSP0NBEf13lS-DtWXNiff1uAFn7GvIQ&s" alt="Résolution et définition">
+                <p>Non, la <strong>résolution</strong> et la <strong>définition</strong> d'une image ou d'un écran ne sont pas la même chose. La <strong>résolution</strong> désigne le <strong>nombre total de pixels</strong> présents sur une image ou un écran. Par exemple, un écran de <strong>1920 x 1080 pixels</strong> a une résolution de 2 073 600 pixels (1920 multiplié par 1080). En revanche, la <strong>définition</strong> se réfère à la <strong>qualité</strong> de l'image, c'est-à-dire à sa netteté et à sa précision. Une image avec une résolution plus élevée peut être plus nette, mais la définition dépend aussi de la taille et de la qualité de l'écran.</p>
             </div>
-        </section>
+        </div>
 
-        <section class="video-section">
-            <h2>Vidéo explicativa</h2>
-            <iframe src="reseaux-sociaux-tik-tok-1_KffeJwCC.mp4" allowfullscreen></iframe>
-        </section>
-    </article>
-</main>
+        <div class="section" id="section5">
+            <h2 onclick="toggleContent('section5')">Le codage TSL : Qu'est-ce que c'est ?</h2>
+            <div class="content-text">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLcBxINsdVbMYQwXUUN86v9pkCUyT0K6iZqg&s" alt="Codage TSL">
+                <p>Le <strong>codage TSL</strong> (ou <strong>TLS</strong>, pour <strong>Transport Layer Security</strong> en anglais) est une technologie de sécurité utilisée pour protéger les échanges d'informations sur Internet. Lorsque vous visitez un site web sécurisé (par exemple, ceux dont l'URL commence par "https"), TSL garantit que les données échangées entre votre ordinateur et le site sont <strong>cryptées</strong> et ne peuvent pas être interceptées par des personnes malveillantes. Cela contribue à assurer la sécurité des informations sensibles telles que les mots de passe ou les informations bancaires.</p>
+            </div>
+        </div>
 
-<footer>
-    <p class="footer-text">&copy; 2025 Présentation TikTok</p>
-</footer>
+        <!-- Sección para video -->
+        <div class="section" id="videoSection">
+            <h2 onclick="toggleContent('videoSection')">Regardez cette vidéo sur la phtographie numérique</h2>
+            <div class="content-text">
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Votre navigateur ne supporte pas la balise vidéo.
+                </video>
+                <p>Voici une vidéo explicative qui vous aidera à mieux comprendre la phtographie numérique.</p>
+            </div>
+        </div>
+    </div>
 
-<!-- Botón de retorno flotante -->
-<a href="https://montewiki.github.io/menu" class="bottom-right-link">Retourner</a>
-    </body>
-</html>
-
-<script>
-    function toggleDropdown(id) {
-        const content = document.getElementById(id);
-        const button = content.previousElementSibling; // El botón
-
-        // Alternar visibilidad del contenido
-        if (content.style.display === "block") {
-            content.style.display = "none";
-            button.classList.remove('open');
-        } else {
-            content.style.display = "block";
-            button.classList.add('open');
-        }
-    }
-
-    // Función para hacer scroll hacia arriba
-    function scrollToTop() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
-    }
-</script>
+    <!-- Botón de retorno como un enlace -->
+    <a href="https://www.tu-enlace-aqui.com" class="return-button">Retourner</a>
 
 </body>
 </html>
