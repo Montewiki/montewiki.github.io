@@ -74,17 +74,6 @@
             border-radius: 10px;
         }
 
-        .image-section {
-            text-align: center;
-            margin-top: 1.5em;
-        }
-
-        .image-section img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 15px;
-        }
-
         .video-section {
             margin-top: 2em;
             text-align: center;
@@ -110,6 +99,27 @@
             font-size: 1.2em;
             letter-spacing: 0.5px;
         }
+
+        /* Estilo para el botón flotante */
+        .return-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00FF00;
+            color: white;
+            border: none;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s ease;
+        }
+
+        .return-button:hover {
+            background-color: #00cc00;
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
@@ -128,9 +138,6 @@
                     <p>Oui, TikTok offre des paramètres de confidentialité pour protéger la vie privée des utilisateurs. Ils peuvent rendre leur compte public ou privé et restreindre l'accès à leurs vidéos et commentaires.</p>
                 </div>
             </div>
-            <div class="image-section">
-                <img src="https://via.placeholder.com/800x400" alt="Paramètres de confidentialité sur TikTok">
-            </div>
         </section>
 
         <section>
@@ -140,9 +147,6 @@
                 <div id="dropdown2" class="dropdown-content">
                     <p>Oui, il est assez simple de se désinscrire de TikTok en accédant aux paramètres du compte et en choisissant l'option de suppression. Il existe une période de rétractation de 30 jours.</p>
                 </div>
-            </div>
-            <div class="image-section">
-                <img src="https://via.placeholder.com/800x400" alt="Désinscription sur TikTok">
             </div>
         </section>
 
@@ -154,9 +158,6 @@
                     <p>Oui, TikTok permet aux utilisateurs de demander une copie de leurs données personnelles via les paramètres de confidentialité. Le processus est simple et les données sont envoyées sous forme de fichier téléchargeable.</p>
                 </div>
             </div>
-            <div class="image-section">
-                <img src="https://via.placeholder.com/800x400" alt="Demande de données personnelles sur TikTok">
-            </div>
         </section>
 
         <section>
@@ -166,9 +167,6 @@
                 <div id="dropdown4" class="dropdown-content">
                     <p>Oui, TikTok supprime les données personnelles des utilisateurs qui se désinscrivent, mais certaines informations peuvent être conservées pour des raisons légales ou techniques.</p>
                 </div>
-            </div>
-            <div class="image-section">
-                <img src="https://via.placeholder.com/800x400" alt="Suppression des données personnelles sur TikTok">
             </div>
         </section>
 
@@ -183,6 +181,9 @@
     <p class="footer-text">&copy; 2025 Présentation TikTok</p>
 </footer>
 
+<!-- Botón de retorno flotante -->
+<button class="return-button" onclick="scrollToTop()">Retourner</button>
+
 <script>
     function toggleDropdown(id) {
         const content = document.getElementById(id);
@@ -196,6 +197,14 @@
             content.style.display = "block";
             button.classList.add('open');
         }
+    }
+
+    // Función para hacer scroll hacia arriba
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     }
 </script>
 
