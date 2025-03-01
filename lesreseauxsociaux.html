@@ -7,13 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #2f2f2f; /* Gris oscuro suave */
-            color: #e0e0e0; /* Texto en gris claro para contraste */
+            background-color: #2f2f2f; /* Gris oscuro */
+            color: #ffffff; /* Blanco para el texto */
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #2b6b2f; /* Verde oscuro */
+            background-color: #39FF14; /* Verde radioactivo */
             color: white;
             text-align: center;
             padding: 20px;
@@ -21,17 +21,18 @@
         .content {
             padding: 20px;
             background-color: #ffffff; /* Blanco para las secciones de contenido */
+            color: #2f2f2f; /* Gris oscuro para el texto de contenido */
             border-radius: 8px;
         }
         .section {
             margin-bottom: 20px;
-            background-color: #3d3d3d; /* Gris oscuro para las secciones */
+            background-color: #444444; /* Gris oscuro para las secciones */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             padding: 15px;
         }
         h2 {
-            color: #1f9b9d; /* Azul turquesa */
+            color: #39FF14; /* Verde radioactivo */
             cursor: pointer;
             font-size: 1.6em;
         }
@@ -47,7 +48,7 @@
             display: block;
         }
         footer {
-            background-color: #333333; /* Gris oscuro */
+            background-color: #2f2f2f; /* Gris oscuro */
             color: white;
             text-align: center;
             padding: 10px;
@@ -57,18 +58,24 @@
             position: fixed;
             right: 20px;
             bottom: 20px;
-            background-color: #ff7b00; /* Naranja suave */
+            background-color: #39FF14; /* Verde radioactivo */
             color: white;
             padding: 15px 25px;
             border-radius: 50%;
             font-size: 1.5em;
-            border: none;
-            cursor: pointer;
+            text-decoration: none;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s;
         }
         .btn-return:hover {
-            background-color: #e66b00; /* Naranja más oscuro */
+            background-color: #2b6b2f; /* Verde oscuro */
+        }
+        video {
+            width: 100%; /* Ajusta el video al ancho de la sección */
+            max-width: 800px;
+            height: auto;
+            display: block;
+            margin: 20px 0;
         }
     </style>
 </head>
@@ -127,13 +134,14 @@
                     <source src="https://www.example.com/video.mp4" type="video/mp4">
                     Votre navigateur ne prend pas en charge la balise vidéo.
                 </video>
+                <p>Voici une vidéo pour expliquer davantage la gestion de la confidentialité sur TikTok.</p>
             </div>
         </div>
 
     </div>
 
-    <!-- Floating Return Button -->
-    <button class="btn-return" onclick="window.location.href='#'">↑</button>
+    <!-- Floating Return Button as a hyperlink -->
+    <a href="#" class="btn-return">↑</a>
 
     <footer>
         <p>&copy; 2025 TikTok - Confidentialité</p>
